@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="remote_video_width">240dp</dimen>
+    <dimen name="remote_video_height">320dp</dimen>
+
+    <dimen name="local_video_width">120dp</dimen>
+    <dimen name="local_video_height">160dp</dimen>
+
+</resources>
