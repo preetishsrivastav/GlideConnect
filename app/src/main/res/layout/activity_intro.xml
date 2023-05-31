@@ -18,42 +18,67 @@
         android:elevation="4dp"/>
 
 
+    <TextView
+        android:id="@+id/tv_Slogan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/connect_to_your_friend_instantly"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/intro_toolbar" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_banner"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="36dp"
+        android:src="@drawable/ic_background_image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_Slogan" />
+
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/et_layout"
+        style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/intro_toolbar"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginRight="10dp"
         android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="200dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_banner"
         >
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/et_channel_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="text"
             android:hint="@string/enter_your_channel_name"
+            android:inputType="text"
             />
-
-
-
     </com.google.android.material.textfield.TextInputLayout>
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_enter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         android:layout_marginBottom="150dp"
         android:background="@drawable/btn_background"
         android:text="@string/enter"
-        android:textStyle="bold"
         android:textColor="@color/white"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/et_layout"
-         />
+  />
+
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -126,7 +126,7 @@ class MainActivity : AppCompatActivity() {
         agoraEngine?.switchCamera()
     }
 
-//    A channel Will Be joined after clicking join button
+    //    A channel Will Be joined after clicking join button
     private fun joinChannel() {
         if (checkSelfPermission()) {
             val options = ChannelMediaOptions()
@@ -146,7 +146,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-//    To SetUp Video into Remote surface view
+    //    To SetUp Video into Remote surface view
     private fun setupRemoteVideo(uid: Int) {
         remoteSurfaceView = mainBinding.remoteVideoView
         remoteSurfaceView.setZOrderMediaOverlay(true)
@@ -161,9 +161,10 @@ class MainActivity : AppCompatActivity() {
         remoteSurfaceView.visibility = View.VISIBLE
     }
 
-//    To SetUp Video into our local surface view
+    //    To SetUp Video into our local surface view
     private fun setupLocalVideo() {
         localSurfaceView = mainBinding.localVideoView
+        localSurfaceView.setZOrderMediaOverlay(true)
         agoraEngine?.setupLocalVideo(
             VideoCanvas(
                 localSurfaceView,
@@ -173,7 +174,7 @@ class MainActivity : AppCompatActivity() {
         )
     }
 
-//TO Leave the Channel Once End call is pressed
+    //TO Leave the Channel Once End call is pressed
     private fun leaveChannel() {
         if (!isJoined) {
             showMessage("Join a channel first")
@@ -185,7 +186,8 @@ class MainActivity : AppCompatActivity() {
             finish()
         }
     }
-// TO add All configuration and enable agora Engine to enable video
+
+    // TO add All configuration and enable agora Engine to enable video
     private fun setupVideoSDKEngine() {
         try {
             val config = RtcEngineConfig()
@@ -199,7 +201,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-// To Handle Various Events
+    // To Handle Various Events
     private val mRtcEventHandler: IRtcEngineEventHandler = object : IRtcEngineEventHandler() {
         override fun onUserJoined(uid: Int, elapsed: Int) {
             showMessage("Remote user joined $uid")
