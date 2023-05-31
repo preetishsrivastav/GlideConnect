@@ -23,7 +23,7 @@ class IntroActivity : AppCompatActivity() {
 
        introBinding.btnEnter.setOnClickListener {
            if (introBinding.etChannelName.text.toString().trim{it <=' ' }.isEmpty()){
-               Toast.makeText(this,"PLease Enter A channel Name",Toast.LENGTH_SHORT).show()
+               Toast.makeText(this,"Please Enter A channel Name",Toast.LENGTH_SHORT).show()
            }else{
                val intent =Intent(this, MainActivity::class.java)
                intent.putExtra("CHANNEL NAME",introBinding.etChannelName.text.toString())
